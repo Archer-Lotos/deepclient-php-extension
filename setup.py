@@ -1,4 +1,6 @@
 from setuptools import setup, find_packages
+from distutils.core import setup
+from Cython.Build import cythonize
 
 setup(
     name="deepclient",
@@ -10,7 +12,7 @@ setup(
     description="Deep Client - a way to connect your favorite language with Deep",
     long_description="Deep Client - a way to connect your favorite language with Deep",
     license="Unlicense",
-    url="https://github.com/deep-foundation/deepclient",
+    url="https://github.com/lotos2021/deepclient-php-extension",
     classifiers=[
         "Development Status :: 3 - Alpha",
         "License :: OSI Approved :: The Unlicense (Unlicense)",
@@ -20,5 +22,7 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
     ],
+    ext_modules=cythonize("deepclient.pyx")
 )
