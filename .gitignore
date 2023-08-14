@@ -1,4 +1,5 @@
 # Byte-compiled / optimized / DLL files
+autom4te.cache
 __pycache__/
 *.py[cod]
 *$py.class
