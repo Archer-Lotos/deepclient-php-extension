@@ -1,5 +1,7 @@
+#define PY_SSIZE_T_CLEAN
 #include "php_headers/php.h"
 #include <Python.h>
+#include <stdlib.h>
 
 PHP_FUNCTION(make_deep_client) {
     char *token = NULL;
@@ -11,10 +13,32 @@ PHP_FUNCTION(make_deep_client) {
         Z_PARAM_STRING(url, url_len)
     ZEND_PARSE_PARAMETERS_END();
 
+    char hook_file_path[] = "./";
+    char hook_file[] = "deep_client_python_extension";
+    PyObject *pName, *pModule, *pFunc, *pValue, *sys, *path, *newPaths;
+    int i;
     Py_Initialize();
 
-    PyObject *pName = PyUnicode_DecodeFSDefault("deep_client_php_extension.py");
-    PyObject *pModule = PyImport_Import(pName);
+    sys = PyImport_ImportModule("sys");
+    path = PyObject_GetAttrString(sys, "path");
+
+    newPaths = PyUnicode_Split(PyUnicode_FromString(hook_file_path), PyUnicode_FromWideChar(L":", 1), -1);
+
+    for(i=0; i<PyList_Size(newPaths); i++) {
+        PyList_Append(path, PyList_GetItem(newPaths, i));
+    }
+
+    Py_XDECREF(newPaths);
+    Py_XDECREF(path);
+    Py_XDECREF(sys);
+
+    pName = PyUnicode_DecodeFSDefault(hook_file);
+
+    if (pName == NULL){
+        fprintf(stderr,"No Python hook file found\n");
+    }
+
+    pModule = PyImport_Import(pName);
     Py_DECREF(pName);
 
     if (pModule != NULL) {
@@ -50,7 +74,7 @@ PHP_FUNCTION(make_deep_client) {
 PHP_FUNCTION(test_python) {
     Py_Initialize();
 
-    PyObject *pName = PyUnicode_DecodeFSDefault("deep_client_php_extension.py");
+    PyObject *pName = PyUnicode_DecodeFSDefault("deep_client_python_extension");
     PyObject *pModule = PyImport_Import(pName);
     Py_DECREF(pName);
 

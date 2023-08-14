@@ -8,9 +8,7 @@ setup(
     name="deep_client",
     version="1.0.3",
     packages=find_packages(),
-    install_requires=[
-        # Add your package dependencies here
-    ],
+    install_requires=open("requirements.txt").readlines(),
     description="Deep Client - a way to connect your favorite language with Deep",
     long_description="Deep Client - a way to connect your favorite language with Deep",
     license="Unlicense",
@@ -26,6 +24,6 @@ setup(
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
     ],
-    # ext_modules=cythonize("deep_client.pyx"),
-    ext_modules=[module]
+    ext_modules=cythonize("deep_client.pyx"),
+    # ext_modules=[module]
 )
