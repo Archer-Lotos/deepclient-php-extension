@@ -1,5 +1,14 @@
+
 # Byte-compiled / optimized / DLL files
 autom4te.cache
+*.cmake
+CMakeCache.txt
+CMakeFiles
+Makefile
+compile_commands.json
+moc_*
+*.moc
+
 __pycache__/
 *.py[cod]
 *$py.class

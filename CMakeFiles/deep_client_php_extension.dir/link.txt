@@ -1,1 +1,0 @@
-/usr/bin/cc -fPIC -O3 -DNDEBUG -shared  -o libdeep_client_php_extension.so CMakeFiles/deep_client_php_extension.dir/deep_client_php_extension.c.o  -lpython3.10 

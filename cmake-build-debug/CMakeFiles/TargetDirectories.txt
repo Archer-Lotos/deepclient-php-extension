@@ -1,3 +1,0 @@
-/home/deep-foundation/deepclient-php-extension/cmake-build-debug/CMakeFiles/deep_client_php_extension.dir
-/home/deep-foundation/deepclient-php-extension/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/deep-foundation/deepclient-php-extension/cmake-build-debug/CMakeFiles/rebuild_cache.dir

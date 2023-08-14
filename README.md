@@ -12,6 +12,9 @@ python setup.py build_ext --inplace
 phpize
 ./configure --enable-deep_client_php_extension
 make
+
+cmake .
+make
 ```
 
 ## Running Tests Python
