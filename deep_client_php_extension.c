@@ -13,16 +13,14 @@ PHP_FUNCTION(make_deep_client) {
         Z_PARAM_STRING(url, url_len)
     ZEND_PARSE_PARAMETERS_END();
 
-    char hook_file_path[] = "./";
-    char hook_file[] = "deep_client_python_extension";
-    PyObject *pName, *pModule, *pFunc, *pValue, *sys, *path, *newPaths;
+    PyObject *pName, *pModule, *sys, *path, *newPaths;
     int i;
     Py_Initialize();
 
     sys = PyImport_ImportModule("sys");
     path = PyObject_GetAttrString(sys, "path");
 
-    newPaths = PyUnicode_Split(PyUnicode_FromString(hook_file_path), PyUnicode_FromWideChar(L":", 1), -1);
+    newPaths = PyUnicode_Split(PyUnicode_FromString("./"), PyUnicode_FromWideChar(L":", 1), -1);
 
     for(i=0; i<PyList_Size(newPaths); i++) {
         PyList_Append(path, PyList_GetItem(newPaths, i));
@@ -32,7 +30,7 @@ PHP_FUNCTION(make_deep_client) {
     Py_XDECREF(path);
     Py_XDECREF(sys);
 
-    pName = PyUnicode_DecodeFSDefault(hook_file);
+    pName = PyUnicode_DecodeFSDefault("deep_client_python_extension");
 
     if (pName == NULL){
         fprintf(stderr,"No Python hook file found\n");
@@ -71,51 +69,14 @@ PHP_FUNCTION(make_deep_client) {
     Py_Finalize();
 }
 
-PHP_FUNCTION(test_python) {
-    Py_Initialize();
-
-    PyObject *pName = PyUnicode_DecodeFSDefault("deep_client_python_extension");
-    PyObject *pModule = PyImport_Import(pName);
-    Py_DECREF(pName);
-
-    if (pModule != NULL) {
-        PyObject *pFunc = PyObject_GetAttrString(pModule, "test_python");
-
-        if (pFunc && PyCallable_Check(pFunc)) {
-            PyObject *pValue = PyObject_CallObject(pFunc, NULL);
-
-            if (pValue != NULL) {
-                Py_DECREF(pValue);
-            } else {
-                Py_DECREF(pFunc);
-                Py_DECREF(pModule);
-                PyErr_Print();
-                PyErr_Clear();
-                return;
-            }
-        } else {
-            if (PyErr_Occurred())
-                PyErr_Print();
-        }
-        Py_XDECREF(pFunc);
-        Py_DECREF(pModule);
-    } else {
-        PyErr_Print();
-    }
-    Py_Finalize();
-}
 
 ZEND_BEGIN_ARG_INFO(arginfo_make_deep_client, 0)
                 ZEND_ARG_INFO(0, token)
                 ZEND_ARG_INFO(0, url)
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_INFO(arginfo_test_python, 0)
-ZEND_END_ARG_INFO()
-
 static zend_function_entry deep_client_php_extension_functions[] = {
     PHP_FE(make_deep_client, arginfo_make_deep_client)
-    PHP_FE(test_python, arginfo_test_python)
 PHP_FE_END
 };
 
