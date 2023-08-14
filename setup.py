@@ -1,10 +1,12 @@
-from setuptools import setup, find_packages
-from distutils.core import setup
+from setuptools import setup, find_packages, Extension
 from Cython.Build import cythonize
 
+module = Extension('deep_client',
+                   sources=['deep_client.c'])
+
 setup(
-    name="deepclient",
-    version="1.0.1", 
+    name="deep_client",
+    version="1.0.3",
     packages=find_packages(),
     install_requires=[
         # Add your package dependencies here
@@ -24,5 +26,6 @@ setup(
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
     ],
-    ext_modules=cythonize("deepclient.pyx")
+    # ext_modules=cythonize("deep_client.pyx"),
+    ext_modules=[module]
 )

@@ -3,12 +3,12 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "name": "deepclient",
+        "name": "deep_client",
         "sources": [
-            "deepclient.pyx"
+            "deep_client.pyx"
         ]
     },
-    "module_name": "deepclient"
+    "module_name": "deep_client"
 }
 END: Cython Metadata */
 
@@ -1085,8 +1085,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__deepclient
-#define __PYX_HAVE_API__deepclient
+#define __PYX_HAVE__deep_client
+#define __PYX_HAVE_API__deep_client
 /* Early includes */
 #ifdef _OPENMP
 #include <omp.h>
@@ -1350,7 +1350,7 @@ static const char *__pyx_filename;
 /* #### Code section: filename_table ### */
 
 static const char *__pyx_f[] = {
-  "deepclient.pyx",
+  "deep_client.pyx",
 };
 /* #### Code section: utility_code_proto_before_types ### */
 /* #### Code section: numeric_typedefs ### */
@@ -1682,13 +1682,6 @@ static CYTHON_INLINE PyObject* __Pyx_PyObject_CallMethO(PyObject *func, PyObject
 #define __Pyx_PyObject_FastCall(func, args, nargs)  __Pyx_PyObject_FastCallDict(func, args, (size_t)(nargs), NULL)
 static CYTHON_INLINE PyObject* __Pyx_PyObject_FastCallDict(PyObject *func, PyObject **args, size_t nargs, PyObject *kwargs);
 
-/* SetPackagePathFromImportLib.proto */
-#if PY_MAJOR_VERSION >= 3 && !CYTHON_PEP489_MULTI_PHASE_INIT
-static int __Pyx_SetPackagePathFromImportLib(PyObject *module_name);
-#else
-#define __Pyx_SetPackagePathFromImportLib(a) 0
-#endif
-
 /* Import.proto */
 static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level);
 
@@ -1901,14 +1894,14 @@ static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 /* #### Code section: module_declarations ### */
 
-/* Module declarations from "deepclient" */
+/* Module declarations from "deep_client" */
 /* #### Code section: typeinfo ### */
 /* #### Code section: before_global_var ### */
-#define __Pyx_MODULE_NAME "deepclient"
-extern int __pyx_module_is_main_deepclient;
-int __pyx_module_is_main_deepclient = 0;
+#define __Pyx_MODULE_NAME "deep_client"
+extern int __pyx_module_is_main_deep_client;
+int __pyx_module_is_main_deep_client = 0;
 
-/* Implementation of "deepclient" */
+/* Implementation of "deep_client" */
 /* #### Code section: global_var ### */
 static PyObject *__pyx_builtin_ValueError;
 /* #### Code section: string_decls ### */
@@ -1934,8 +1927,8 @@ static const char __pyx_k_gql_client[] = "gql_client";
 static const char __pyx_k_deep_client[] = "deep_client";
 static const char __pyx_k_is_coroutine[] = "_is_coroutine";
 static const char __pyx_k_Authorization[] = "Authorization";
-static const char __pyx_k_deepclient_pyx[] = "deepclient.pyx";
 static const char __pyx_k_No_url_provided[] = "No url provided";
+static const char __pyx_k_deep_client_pyx[] = "deep_client.pyx";
 static const char __pyx_k_AIOHTTPTransport[] = "AIOHTTPTransport";
 static const char __pyx_k_make_deep_client[] = "make_deep_client";
 static const char __pyx_k_DeepClientOptions[] = "DeepClientOptions";
@@ -1945,7 +1938,7 @@ static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_gql_transport_aiohttp[] = "gql.transport.aiohttp";
 static const char __pyx_k_fetch_schema_from_transport[] = "fetch_schema_from_transport";
 /* #### Code section: decls ### */
-static PyObject *__pyx_pf_10deepclient_make_deep_client(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_token, PyObject *__pyx_v_url); /* proto */
+static PyObject *__pyx_pf_11deep_client_make_deep_client(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_token, PyObject *__pyx_v_url); /* proto */
 /* #### Code section: late_includes ### */
 /* #### Code section: module_state ### */
 typedef struct {
@@ -1990,9 +1983,8 @@ typedef struct {
   PyObject *__pyx_n_s_client;
   PyObject *__pyx_n_s_cline_in_traceback;
   PyObject *__pyx_n_s_deep_client;
+  PyObject *__pyx_kp_s_deep_client_pyx;
   PyObject *__pyx_n_s_deepclient;
-  PyObject *__pyx_n_u_deepclient;
-  PyObject *__pyx_kp_s_deepclient_pyx;
   PyObject *__pyx_n_s_fetch_schema_from_transport;
   PyObject *__pyx_n_s_gql;
   PyObject *__pyx_n_s_gql_client;
@@ -2069,9 +2061,8 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_client);
   Py_CLEAR(clear_module_state->__pyx_n_s_cline_in_traceback);
   Py_CLEAR(clear_module_state->__pyx_n_s_deep_client);
+  Py_CLEAR(clear_module_state->__pyx_kp_s_deep_client_pyx);
   Py_CLEAR(clear_module_state->__pyx_n_s_deepclient);
-  Py_CLEAR(clear_module_state->__pyx_n_u_deepclient);
-  Py_CLEAR(clear_module_state->__pyx_kp_s_deepclient_pyx);
   Py_CLEAR(clear_module_state->__pyx_n_s_fetch_schema_from_transport);
   Py_CLEAR(clear_module_state->__pyx_n_s_gql);
   Py_CLEAR(clear_module_state->__pyx_n_s_gql_client);
@@ -2126,9 +2117,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_client);
   Py_VISIT(traverse_module_state->__pyx_n_s_cline_in_traceback);
   Py_VISIT(traverse_module_state->__pyx_n_s_deep_client);
+  Py_VISIT(traverse_module_state->__pyx_kp_s_deep_client_pyx);
   Py_VISIT(traverse_module_state->__pyx_n_s_deepclient);
-  Py_VISIT(traverse_module_state->__pyx_n_u_deepclient);
-  Py_VISIT(traverse_module_state->__pyx_kp_s_deepclient_pyx);
   Py_VISIT(traverse_module_state->__pyx_n_s_fetch_schema_from_transport);
   Py_VISIT(traverse_module_state->__pyx_n_s_gql);
   Py_VISIT(traverse_module_state->__pyx_n_s_gql_client);
@@ -2193,9 +2183,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_client __pyx_mstate_global->__pyx_n_s_client
 #define __pyx_n_s_cline_in_traceback __pyx_mstate_global->__pyx_n_s_cline_in_traceback
 #define __pyx_n_s_deep_client __pyx_mstate_global->__pyx_n_s_deep_client
+#define __pyx_kp_s_deep_client_pyx __pyx_mstate_global->__pyx_kp_s_deep_client_pyx
 #define __pyx_n_s_deepclient __pyx_mstate_global->__pyx_n_s_deepclient
-#define __pyx_n_u_deepclient __pyx_mstate_global->__pyx_n_u_deepclient
-#define __pyx_kp_s_deepclient_pyx __pyx_mstate_global->__pyx_kp_s_deepclient_pyx
 #define __pyx_n_s_fetch_schema_from_transport __pyx_mstate_global->__pyx_n_s_fetch_schema_from_transport
 #define __pyx_n_s_gql __pyx_mstate_global->__pyx_n_s_gql
 #define __pyx_n_s_gql_client __pyx_mstate_global->__pyx_n_s_gql_client
@@ -2217,7 +2206,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_codeobj__5 __pyx_mstate_global->__pyx_codeobj__5
 /* #### Code section: module_code ### */
 
-/* "deepclient.pyx":5
+/* "deep_client.pyx":5
  * from gql.transport.aiohttp import AIOHTTPTransport
  * 
  * def make_deep_client(token, url):             # <<<<<<<<<<<<<<
@@ -2226,15 +2215,15 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10deepclient_1make_deep_client(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_11deep_client_1make_deep_client(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_10deepclient_1make_deep_client = {"make_deep_client", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_10deepclient_1make_deep_client, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_10deepclient_1make_deep_client(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_11deep_client_1make_deep_client = {"make_deep_client", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_11deep_client_1make_deep_client, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_11deep_client_1make_deep_client(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -2297,18 +2286,18 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("make_deep_client", 1, 2, 2, __pyx_nargs); __PYX_ERR(0, 5, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("deepclient.make_deep_client", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("deep_client.make_deep_client", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10deepclient_make_deep_client(__pyx_self, __pyx_v_token, __pyx_v_url);
+  __pyx_r = __pyx_pf_11deep_client_make_deep_client(__pyx_self, __pyx_v_token, __pyx_v_url);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10deepclient_make_deep_client(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_token, PyObject *__pyx_v_url) {
+static PyObject *__pyx_pf_11deep_client_make_deep_client(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_token, PyObject *__pyx_v_url) {
   PyObject *__pyx_v_transport = NULL;
   PyObject *__pyx_v_client = NULL;
   PyObject *__pyx_v_options = NULL;
@@ -2328,7 +2317,7 @@ static PyObject *__pyx_pf_10deepclient_make_deep_client(CYTHON_UNUSED PyObject *
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("make_deep_client", 0);
 
-  /* "deepclient.pyx":6
+  /* "deep_client.pyx":6
  * 
  * def make_deep_client(token, url):
  *     if not token:             # <<<<<<<<<<<<<<
@@ -2339,7 +2328,7 @@ static PyObject *__pyx_pf_10deepclient_make_deep_client(CYTHON_UNUSED PyObject *
   __pyx_t_2 = (!__pyx_t_1);
   if (unlikely(__pyx_t_2)) {
 
-    /* "deepclient.pyx":7
+    /* "deep_client.pyx":7
  * def make_deep_client(token, url):
  *     if not token:
  *         raise ValueError("No token provided")             # <<<<<<<<<<<<<<
@@ -2352,7 +2341,7 @@ static PyObject *__pyx_pf_10deepclient_make_deep_client(CYTHON_UNUSED PyObject *
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __PYX_ERR(0, 7, __pyx_L1_error)
 
-    /* "deepclient.pyx":6
+    /* "deep_client.pyx":6
  * 
  * def make_deep_client(token, url):
  *     if not token:             # <<<<<<<<<<<<<<
@@ -2361,7 +2350,7 @@ static PyObject *__pyx_pf_10deepclient_make_deep_client(CYTHON_UNUSED PyObject *
  */
   }
 
-  /* "deepclient.pyx":8
+  /* "deep_client.pyx":8
  *     if not token:
  *         raise ValueError("No token provided")
  *     if not url:             # <<<<<<<<<<<<<<
@@ -2372,7 +2361,7 @@ static PyObject *__pyx_pf_10deepclient_make_deep_client(CYTHON_UNUSED PyObject *
   __pyx_t_1 = (!__pyx_t_2);
   if (unlikely(__pyx_t_1)) {
 
-    /* "deepclient.pyx":9
+    /* "deep_client.pyx":9
  *         raise ValueError("No token provided")
  *     if not url:
  *         raise ValueError("No url provided")             # <<<<<<<<<<<<<<
@@ -2385,7 +2374,7 @@ static PyObject *__pyx_pf_10deepclient_make_deep_client(CYTHON_UNUSED PyObject *
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __PYX_ERR(0, 9, __pyx_L1_error)
 
-    /* "deepclient.pyx":8
+    /* "deep_client.pyx":8
  *     if not token:
  *         raise ValueError("No token provided")
  *     if not url:             # <<<<<<<<<<<<<<
@@ -2394,7 +2383,7 @@ static PyObject *__pyx_pf_10deepclient_make_deep_client(CYTHON_UNUSED PyObject *
  */
   }
 
-  /* "deepclient.pyx":10
+  /* "deep_client.pyx":10
  *     if not url:
  *         raise ValueError("No url provided")
  *     transport = AIOHTTPTransport(url=url, headers={'Authorization': f"Bearer {token}"})             # <<<<<<<<<<<<<<
@@ -2424,7 +2413,7 @@ static PyObject *__pyx_pf_10deepclient_make_deep_client(CYTHON_UNUSED PyObject *
   __pyx_v_transport = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "deepclient.pyx":11
+  /* "deep_client.pyx":11
  *         raise ValueError("No url provided")
  *     transport = AIOHTTPTransport(url=url, headers={'Authorization': f"Bearer {token}"})
  *     client = Client(transport=transport, fetch_schema_from_transport=True)             # <<<<<<<<<<<<<<
@@ -2444,7 +2433,7 @@ static PyObject *__pyx_pf_10deepclient_make_deep_client(CYTHON_UNUSED PyObject *
   __pyx_v_client = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "deepclient.pyx":12
+  /* "deep_client.pyx":12
  *     transport = AIOHTTPTransport(url=url, headers={'Authorization': f"Bearer {token}"})
  *     client = Client(transport=transport, fetch_schema_from_transport=True)
  *     options = DeepClientOptions(gql_client=client)             # <<<<<<<<<<<<<<
@@ -2463,7 +2452,7 @@ static PyObject *__pyx_pf_10deepclient_make_deep_client(CYTHON_UNUSED PyObject *
   __pyx_v_options = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "deepclient.pyx":13
+  /* "deep_client.pyx":13
  *     client = Client(transport=transport, fetch_schema_from_transport=True)
  *     options = DeepClientOptions(gql_client=client)
  *     deep_client = DeepClient(options)             # <<<<<<<<<<<<<<
@@ -2494,7 +2483,7 @@ static PyObject *__pyx_pf_10deepclient_make_deep_client(CYTHON_UNUSED PyObject *
   __pyx_v_deep_client = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "deepclient.pyx":14
+  /* "deep_client.pyx":14
  *     options = DeepClientOptions(gql_client=client)
  *     deep_client = DeepClient(options)
  *     return deep_client             # <<<<<<<<<<<<<<
@@ -2504,7 +2493,7 @@ static PyObject *__pyx_pf_10deepclient_make_deep_client(CYTHON_UNUSED PyObject *
   __pyx_r = __pyx_v_deep_client;
   goto __pyx_L0;
 
-  /* "deepclient.pyx":5
+  /* "deep_client.pyx":5
  * from gql.transport.aiohttp import AIOHTTPTransport
  * 
  * def make_deep_client(token, url):             # <<<<<<<<<<<<<<
@@ -2519,7 +2508,7 @@ static PyObject *__pyx_pf_10deepclient_make_deep_client(CYTHON_UNUSED PyObject *
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("deepclient.make_deep_client", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("deep_client.make_deep_client", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_transport);
@@ -2562,9 +2551,8 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_client, __pyx_k_client, sizeof(__pyx_k_client), 0, 0, 1, 1},
     {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
     {&__pyx_n_s_deep_client, __pyx_k_deep_client, sizeof(__pyx_k_deep_client), 0, 0, 1, 1},
+    {&__pyx_kp_s_deep_client_pyx, __pyx_k_deep_client_pyx, sizeof(__pyx_k_deep_client_pyx), 0, 0, 1, 0},
     {&__pyx_n_s_deepclient, __pyx_k_deepclient, sizeof(__pyx_k_deepclient), 0, 0, 1, 1},
-    {&__pyx_n_u_deepclient, __pyx_k_deepclient, sizeof(__pyx_k_deepclient), 0, 1, 0, 1},
-    {&__pyx_kp_s_deepclient_pyx, __pyx_k_deepclient_pyx, sizeof(__pyx_k_deepclient_pyx), 0, 0, 1, 0},
     {&__pyx_n_s_fetch_schema_from_transport, __pyx_k_fetch_schema_from_transport, sizeof(__pyx_k_fetch_schema_from_transport), 0, 0, 1, 1},
     {&__pyx_n_s_gql, __pyx_k_gql, sizeof(__pyx_k_gql), 0, 0, 1, 1},
     {&__pyx_n_s_gql_client, __pyx_k_gql_client, sizeof(__pyx_k_gql_client), 0, 0, 1, 1},
@@ -2597,7 +2585,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "deepclient.pyx":7
+  /* "deep_client.pyx":7
  * def make_deep_client(token, url):
  *     if not token:
  *         raise ValueError("No token provided")             # <<<<<<<<<<<<<<
@@ -2608,7 +2596,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "deepclient.pyx":9
+  /* "deep_client.pyx":9
  *         raise ValueError("No token provided")
  *     if not url:
  *         raise ValueError("No url provided")             # <<<<<<<<<<<<<<
@@ -2619,7 +2607,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "deepclient.pyx":5
+  /* "deep_client.pyx":5
  * from gql.transport.aiohttp import AIOHTTPTransport
  * 
  * def make_deep_client(token, url):             # <<<<<<<<<<<<<<
@@ -2629,7 +2617,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__4 = PyTuple_Pack(6, __pyx_n_s_token, __pyx_n_s_url, __pyx_n_s_transport, __pyx_n_s_client, __pyx_n_s_options, __pyx_n_s_deep_client); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
-  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_deepclient_pyx, __pyx_n_s_make_deep_client, 5, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) __PYX_ERR(0, 5, __pyx_L1_error)
+  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_deep_client_pyx, __pyx_n_s_make_deep_client, 5, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -2719,10 +2707,10 @@ static int __Pyx_modinit_function_import_code(void) {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_deepclient(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_deep_client(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_deepclient},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_deep_client},
   {0, NULL}
 };
 #endif
@@ -2735,7 +2723,7 @@ namespace {
   #endif
   {
       PyModuleDef_HEAD_INIT,
-      "deepclient",
+      "deep_client",
       0, /* m_doc */
     #if CYTHON_PEP489_MULTI_PHASE_INIT
       0, /* m_size */
@@ -2783,17 +2771,11 @@ namespace {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initdeepclient(void) CYTHON_SMALL_CODE; /*proto*/
-#if !defined(CYTHON_NO_PYINIT_EXPORT) && (defined(_WIN32) || defined(WIN32) || defined(MS_WINDOWS))
-__Pyx_PyMODINIT_FUNC init__init__(void) { initdeepclient(); }
-#endif
-__Pyx_PyMODINIT_FUNC initdeepclient(void)
+__Pyx_PyMODINIT_FUNC initdeep_client(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initdeep_client(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_deepclient(void) CYTHON_SMALL_CODE; /*proto*/
-#if !defined(CYTHON_NO_PYINIT_EXPORT) && (defined(_WIN32) || defined(WIN32) || defined(MS_WINDOWS))
-__Pyx_PyMODINIT_FUNC PyInit___init__(void) { return PyInit_deepclient(); }
-#endif
-__Pyx_PyMODINIT_FUNC PyInit_deepclient(void)
+__Pyx_PyMODINIT_FUNC PyInit_deep_client(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_deep_client(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -2874,7 +2856,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_deepclient(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_deep_client(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -2892,7 +2874,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_deepclient(PyObject *__pyx_pyinit_
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'deepclient' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'deep_client' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -2904,13 +2886,13 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_deepclient(PyObject *__pyx_pyinit_
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("deepclient", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("deep_client", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   if (unlikely(!__pyx_m)) __PYX_ERR(0, 1, __pyx_L1_error)
   #elif CYTHON_USE_MODULE_STATE
   __pyx_t_1 = PyModule_Create(&__pyx_moduledef); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   {
     int add_module_result = PyState_AddModule(__pyx_t_1, &__pyx_moduledef);
-    __pyx_t_1 = 0; /* transfer ownership from __pyx_t_1 to deepclient pseudovariable */
+    __pyx_t_1 = 0; /* transfer ownership from __pyx_t_1 to deep_client pseudovariable */
     if (unlikely((add_module_result < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
     pystate_addmodule_run = 1;
   }
@@ -2936,7 +2918,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_deepclient(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_deep_client(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -2974,17 +2956,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_deepclient) {
+  if (__pyx_module_is_main_deep_client) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  }
-  if (!CYTHON_PEP489_MULTI_PHASE_INIT) {
-    if (unlikely((__Pyx_SetPackagePathFromImportLib(__pyx_n_u_deepclient) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "deepclient")) {
-      if (unlikely((PyDict_SetItemString(modules, "deepclient", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "deep_client")) {
+      if (unlikely((PyDict_SetItemString(modules, "deep_client", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -3005,7 +2984,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "deepclient.pyx":1
+  /* "deep_client.pyx":1
  * from deepclient import DeepClient, DeepClientOptions             # <<<<<<<<<<<<<<
  * from gql import gql, Client
  * from gql.transport.aiohttp import AIOHTTPTransport
@@ -3031,7 +3010,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "deepclient.pyx":2
+  /* "deep_client.pyx":2
  * from deepclient import DeepClient, DeepClientOptions
  * from gql import gql, Client             # <<<<<<<<<<<<<<
  * from gql.transport.aiohttp import AIOHTTPTransport
@@ -3058,7 +3037,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "deepclient.pyx":3
+  /* "deep_client.pyx":3
  * from deepclient import DeepClient, DeepClientOptions
  * from gql import gql, Client
  * from gql.transport.aiohttp import AIOHTTPTransport             # <<<<<<<<<<<<<<
@@ -3079,19 +3058,19 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "deepclient.pyx":5
+  /* "deep_client.pyx":5
  * from gql.transport.aiohttp import AIOHTTPTransport
  * 
  * def make_deep_client(token, url):             # <<<<<<<<<<<<<<
  *     if not token:
  *         raise ValueError("No token provided")
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_10deepclient_1make_deep_client, 0, __pyx_n_s_make_deep_client, NULL, __pyx_n_s_deepclient, __pyx_d, ((PyObject *)__pyx_codeobj__5)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 5, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_11deep_client_1make_deep_client, 0, __pyx_n_s_make_deep_client, NULL, __pyx_n_s_deep_client, __pyx_d, ((PyObject *)__pyx_codeobj__5)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_make_deep_client, __pyx_t_3) < 0) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "deepclient.pyx":1
+  /* "deep_client.pyx":1
  * from deepclient import DeepClient, DeepClientOptions             # <<<<<<<<<<<<<<
  * from gql import gql, Client
  * from gql.transport.aiohttp import AIOHTTPTransport
@@ -3109,7 +3088,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_3);
   if (__pyx_m) {
     if (__pyx_d && stringtab_initialized) {
-      __Pyx_AddTraceback("init deepclient", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init deep_client", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     #if !CYTHON_USE_MODULE_STATE
     Py_CLEAR(__pyx_m);
@@ -3123,7 +3102,7 @@ if (!__Pyx_RefNanny) {
     }
     #endif
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init deepclient");
+    PyErr_SetString(PyExc_ImportError, "init deep_client");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -4146,57 +4125,6 @@ static CYTHON_INLINE PyObject* __Pyx_PyObject_FastCallDict(PyObject *func, PyObj
     }
     return __Pyx_PyObject_FastCall_fallback(func, args, (size_t)nargs, kwargs);
 }
-
-/* SetPackagePathFromImportLib */
-#if PY_MAJOR_VERSION >= 3 && !CYTHON_PEP489_MULTI_PHASE_INIT
-static int __Pyx_SetPackagePathFromImportLib(PyObject *module_name) {
-    PyObject *importlib, *osmod, *ossep, *parts, *package_path;
-    PyObject *file_path = NULL;
-    int result;
-    PyObject *spec;
-    importlib = PyImport_ImportModule("importlib.util");
-    if (unlikely(!importlib))
-        goto bad;
-    spec = PyObject_CallMethod(importlib, "find_spec", "(O)", module_name);
-    Py_DECREF(importlib);
-    if (unlikely(!spec))
-        goto bad;
-    file_path = PyObject_GetAttrString(spec, "origin");
-    Py_DECREF(spec);
-    if (unlikely(!file_path))
-        goto bad;
-    if (unlikely(PyObject_SetAttrString(__pyx_m, "__file__", file_path) < 0))
-        goto bad;
-    osmod = PyImport_ImportModule("os");
-    if (unlikely(!osmod))
-        goto bad;
-    ossep = PyObject_GetAttrString(osmod, "sep");
-    Py_DECREF(osmod);
-    if (unlikely(!ossep))
-        goto bad;
-    parts = PyObject_CallMethod(file_path, "rsplit", "(Oi)", ossep, 1);
-    Py_DECREF(file_path); file_path = NULL;
-    Py_DECREF(ossep);
-    if (unlikely(!parts))
-        goto bad;
-    package_path = Py_BuildValue("[O]", PyList_GET_ITEM(parts, 0));
-    Py_DECREF(parts);
-    if (unlikely(!package_path))
-        goto bad;
-    goto set_path;
-bad:
-    PyErr_WriteUnraisable(module_name);
-    Py_XDECREF(file_path);
-    PyErr_Clear();
-    package_path = PyList_New(0);
-    if (unlikely(!package_path))
-        return -1;
-set_path:
-    result = PyObject_SetAttrString(__pyx_m, "__path__", package_path);
-    Py_DECREF(package_path);
-    return result;
-}
-#endif
 
 /* Import */
 static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level) {
