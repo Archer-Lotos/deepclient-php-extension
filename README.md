@@ -8,6 +8,10 @@ Deep Client - a way to connect your favourite language with Deep.
 ```
 pip install -r requirements.txt
 python setup.py build_ext --inplace
+
+phpize
+./configure --enable-deep_client_php_extension
+make
 ```
 
 ## Running Tests Python
