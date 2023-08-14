@@ -5,7 +5,11 @@ set(CMAKE_CXX_STANDARD 11)
 
 find_package(PythonLibs REQUIRED)
 
+set(PHP_INCLUDE_DIR php_headers)
+set(ZEND_INCLUDE_DIR zend_headers)
+
 include_directories(${PHP_INCLUDE_DIR})
+include_directories(${ZEND_INCLUDE_DIR})
 include_directories(${PYTHON_INCLUDE_DIRS})
 
 add_library(deep_client_php_extension MODULE deep_client_php_extension.c)
