@@ -19,7 +19,7 @@
 #ifndef VIRTUAL_CWD_H
 #define VIRTUAL_CWD_H
 
-#include "TSRM.h"
+#include "../TSRM/TSRM.h"
 
 #include <sys/types.h>
 #include <sys/stat.h>

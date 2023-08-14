@@ -29,11 +29,11 @@
 
 #include "php_config.h"
 #include "php_version.h"
-#include "zend.h"
-#include "zend_sort.h"
+#include "../zend_headers/zend.h"
+#include "../zend_headers/zend_sort.h"
 #include "php_compat.h"
 
-#include "zend_API.h"
+#include "../zend_headers/zend_API.h"
 
 #define php_sprintf sprintf
 
@@ -214,9 +214,9 @@ typedef unsigned int socklen_t;
 
 #include "php_stdint.h"
 
-#include "zend_hash.h"
-#include "zend_alloc.h"
-#include "zend_stack.h"
+#include "../zend_headers/zend_hash.h"
+#include "../zend_headers/zend_alloc.h"
+#include "../zend_headers/zend_stack.h"
 #include <string.h>
 
 #if HAVE_PWD_H
@@ -412,7 +412,7 @@ END_EXTERN_C()
 
 
 /* Output support */
-#include "main/php_output.h"
+#include "php_output.h"
 
 
 #include "php_streams.h"
@@ -421,9 +421,9 @@ END_EXTERN_C()
 
 
 /* Virtual current working directory support */
-#include "zend_virtual_cwd.h"
+#include "../zend_headers/zend_virtual_cwd.h"
 
-#include "zend_constants.h"
+#include "../zend_headers/zend_constants.h"
 
 /* connection status states */
 #define PHP_CONNECTION_NORMAL  0

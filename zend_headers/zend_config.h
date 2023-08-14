@@ -1,1 +1,1 @@
-#include <../main/php_config.h>
+#include <../php_headers/php_config.h>
