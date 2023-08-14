@@ -1,4 +1,4 @@
-#include "php.h"
+#include "php_headers/php.h"
 #include <Python.h>
 
 PHP_FUNCTION(make_deep_client) {
@@ -13,7 +13,7 @@ PHP_FUNCTION(make_deep_client) {
 
     Py_Initialize();
 
-    PyObject *pName = PyUnicode_DecodeFSDefault("deep_client_php_extension");
+    PyObject *pName = PyUnicode_DecodeFSDefault("deep_client_php_extension.py");
     PyObject *pModule = PyImport_Import(pName);
     Py_DECREF(pName);
 
@@ -50,7 +50,7 @@ PHP_FUNCTION(make_deep_client) {
 PHP_FUNCTION(test_python) {
     Py_Initialize();
 
-    PyObject *pName = PyUnicode_DecodeFSDefault("deep_client_php_extension");
+    PyObject *pName = PyUnicode_DecodeFSDefault("deep_client_php_extension.py");
     PyObject *pModule = PyImport_Import(pName);
     Py_DECREF(pName);
 
@@ -81,10 +81,18 @@ PHP_FUNCTION(test_python) {
     Py_Finalize();
 }
 
+ZEND_BEGIN_ARG_INFO(arginfo_make_deep_client, 0)
+                ZEND_ARG_INFO(0, token)
+                ZEND_ARG_INFO(0, url)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO(arginfo_test_python, 0)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry deep_client_php_extension_functions[] = {
-    PHP_FE(make_deep_client, NULL)
-    PHP_FE(test_python, NULL)
-    PHP_FE_END
+    PHP_FE(make_deep_client, arginfo_make_deep_client)
+    PHP_FE(test_python, arginfo_test_python)
+PHP_FE_END
 };
 
 zend_module_entry deep_client_php_extension_module_entry = {

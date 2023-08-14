@@ -14,6 +14,7 @@ include_directories(${EXT_PHP_INCLUDE_DIR})
 include_directories(${ZEND_INCLUDE_DIR})
 include_directories(${PYTHON_INCLUDE_DIRS})
 
-add_library(deep_client_php_extension MODULE deep_client_php_extension.c)
+add_library(deep_client_php_extension MODULE deep_client_php_extension.c
+        deep_client.c)
 
 target_link_libraries(deep_client_php_extension ${PYTHON_LIBRARIES})

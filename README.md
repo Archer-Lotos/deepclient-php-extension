@@ -15,6 +15,10 @@ make
 
 cmake .
 make
+
+/etc/init.d/php8.1-fpm restart
+
+g++ -shared -o my_python_module.o -fPIC -I/usr/include/python3.8 -c my_python_module.cpp
 ```
 
 ## Running Tests Python
