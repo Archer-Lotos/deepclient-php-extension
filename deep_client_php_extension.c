@@ -53,17 +53,17 @@ PHP_FUNCTION(make_deep_client) {
                 zend_object *deepClient_php;
 
                 if (instanceof_function(pValue, PyObject_Type)) {
-                    deepClient_ce = zend_fetch_class_by_name(ZEND_STRL("DeepClient"));
+                    deepClient_ce = zend_fetch_class(ZEND_STRL("DeepClient"));
                     object_init_ex(return_value, deepClient_ce);
                     deepClient_php = Z_OBJ_P(return_value);
-                } else {
-                    ZVAL_OBJ(return_value, (zend_object *)pValue);
-                }
-
-                if (deepClient_php) {
                     Py_INCREF(deepClient_php);
+                } else {
+                    Py_DECREF(pFunc);
+                    Py_DECREF(pModule);
+                    PyErr_Print();
+                    PyErr_Clear();
+                    return;
                 }
-
                 Py_DECREF(pValue);
             } else {
                 Py_DECREF(pFunc);
