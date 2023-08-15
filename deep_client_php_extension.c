@@ -3,6 +3,13 @@
 #include <Python.h>
 #include <stdlib.h>
 
+static PyTypeObject DeepClient_Type = {
+        PyVarObject_HEAD_INIT(NULL, 0)
+                .tp_name = "deep_client_python_extension.DeepClient",
+        .tp_basicsize = sizeof(DeepClient),
+        .tp_itemsize = 0,
+};
+
 PHP_FUNCTION(make_deep_client) {
     char *token = NULL;
     char *url = NULL;
