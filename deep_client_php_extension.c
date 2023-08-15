@@ -3,6 +3,10 @@
 #include <Python.h>
 #include <stdlib.h>
 
+typedef struct {
+    zend_object std;
+} DeepClient;
+
 static PyTypeObject DeepClient_Type = {
         PyVarObject_HEAD_INIT(NULL, 0)
                 .tp_name = "deep_client_python_extension.DeepClient",
@@ -59,24 +63,29 @@ PHP_FUNCTION(make_deep_client) {
                 zend_class_entry *deepClient_ce;
                 zend_object *deepClient_php;
 
-                if (instanceof_function(pValue, PyObject_Type)) {
+                if (PyObject_IsInstance(pValue, (PyObject *)&DeepClient_Type)) {
                     deepClient_ce = zend_fetch_class(ZEND_STRL("DeepClient"));
+                    object_init(return_value);
                     object_init_ex(return_value, deepClient_ce);
                     deepClient_php = Z_OBJ_P(return_value);
                     Py_INCREF(deepClient_php);
                 } else {
                     Py_DECREF(pFunc);
                     Py_DECREF(pModule);
+                    Py_DECREF(pValue);
                     PyErr_Print();
                     PyErr_Clear();
+                    Py_Finalize();
                     return;
                 }
                 Py_DECREF(pValue);
             } else {
                 Py_DECREF(pFunc);
                 Py_DECREF(pModule);
+                Py_DECREF(pValue);
                 PyErr_Print();
                 PyErr_Clear();
+                Py_Finalize();
                 return;
             }
         } else {
