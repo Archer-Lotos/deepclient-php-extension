@@ -49,6 +49,18 @@ PHP_FUNCTION(make_deep_client) {
             Py_DECREF(pArgs);
 
             if (pValue != NULL) {
+                if (PyUnicode_Check(pValue)) {
+                    char *result = PyUnicode_AsUTF8(pValue);
+                    RETURN_STRING(result);
+                } else if (PyLong_Check(pValue)) {
+                    long int_result = PyLong_AsLong(pValue);
+                    RETURN_LONG(int_result);
+                } else if (PyFloat_Check(pValue)) {
+                    double float_result = PyFloat_AsDouble(pValue);
+                    RETURN_DOUBLE(float_result);
+                } else {
+                    ZVAL_OBJ(return_value, (zend_object *)pValue);
+                }
                 Py_DECREF(pValue);
             } else {
                 Py_DECREF(pFunc);
